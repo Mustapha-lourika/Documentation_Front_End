@@ -1,0 +1,785 @@
+<div class="container">
+
+    <!-- Page Content -->
+    <div class="content_introduction">
+
+      <div >
+
+
+    <div style="padding: 20px;">
+
+    </div>
+        <div  id="a-propos-de-karaz">
+
+
+        <h3 class=" text-primary title-doc" >  A propos de karaz studio </h3>
+        A premier abord, Karaz studio peut être assimilé à un environnement
+         de développement intégré (IDE) fournissant des outils de conception,
+          production et déploiement de modules applicatifs métier.
+           Il s’agit en effet d’une bonne partie de ses fonctions, mais pas uniquement…
+
+        Karaz Studio constitue un environnement intégré de coproduction de module applicatifs axés sur le management par processus,
+         avec la particularité de réunir dans un point focal les 3 acteurs les plus importants dans tout projet de transformation digitale :
+
+         <br>
+
+         <ul>
+        <li> <i class="fas fa-info-circle"></i> Le client.</li>
+
+
+        <li> <i class="fas fa-info-circle"></i> 	Le concepteur.</li>
+
+        <li> <i class="fas fa-info-circle"></i> 	L’exploitant.</li>
+        </ul>
+        Chacun de ces 3 acteurs détient un rôle précis dans la démarche Karaz conçue par Ribatis et industrialisée à travers Karaz Studio. <br>
+
+  Le Credo Karaz se résume à : Everything is process.
+  Rien d’étonnant donc, à ce que la démarche Karaz soit elle-même décrite sous forme d’un méta-processus débutant par la formalisation de l’idée par le client et aboutissant à la publication par l’exploitant du service digital, qui a été réalisé préalablement par le concepteur.
+  Karaz Studio fourni donc les outils nécessaires à la production de services digitaux (eServices) de grande qualité, mais offre au même temps le cadre d’un travail collaboratif entre les 3 acteurs cités plus haut.
+
+  </div>
+
+    <div id="a-qui-s'adresse-ce-chapitre">
+  <h3 class="text-primary title-doc" >  A qui s'adresse ce chapitre </h3>
+
+  Entant qu’outil intégré de la transformation digitale, la plateforme Karaz couvre un large spectre de besoins, aussi bien méthodologiques et architecturaux que fonctionnels et techniques.
+  Le présent chapitre pour sa part, s’adresse spécifiquement aux analystes métier et développeurs souhaitant réaliser des projets de digitalisation de processus métier. D’autres documents abordant des volets connexes tels que la méthodologie de transformation digitale,
+   l’architecture des plateformes digitales ouvertes, l’administration fonctionnelle des services digitaux,
+   … seront publiés dans le cadre de la série Karaz Hand Book
+
+
+
+  </div>
+
+  <div id="installation-karaz-studio">
+  <h3 class="text-primary title-doc">Installation de karaz studio? </h3>
+
+  A partir du <a href="www.ribatis.com/karaz-studio.html" >lien  </a> téléchargez la dernière version stable de Karaz studio.
+  Deux distributions de Karaz Studio sont disponibles en téléchargement :
+
+  <ul>
+  <li><i class="fas fa-info-circle"></i> <strong>  Karaz Studio Full Edition </strong>:Contient le package d’installation Karaz ainsi que l’ensemble des composants logiciels et bibliothèques utilisées par Karaz Studio et son environnement d’exécution (SGBD, Serveur d’application, …) :</li>
+  <ul>
+  <li><i class="fas fa-info-circle"></i>  	Java Runtime</li>
+  <li> <i class="fas fa-info-circle"></i>  	My SQL</li>
+  <li> <i class="fas fa-info-circle"></i> 	Glassfish</li>
+  <li> <i class="fas fa-info-circle"></i> 	… </li>
+  </ul>
+  <li><strong>  <i class="fas fa-info-circle"></i> Karaz Studio Tiny Edition :</strong> Contient uniquement le programme d’installation de Karaz Studio. Les autres composants doivent être installés séparément.</li>
+  </ul>
+
+  <strong class=" marg text-success">  Installation de KARAZ STUDIO </strong>
+
+
+  <div class="marg">
+    <i class="fas fa-angle-double-right"></i> Double-cliquez sur le fichier exécutable karazplatform.exe. Karaz Studio se lance.
+  </div>
+
+
+  <p class="marg"> <i class="fas fa-angle-double-right"></i> veuillez cliquer sur suivant pour continuer </p>
+
+
+
+  <img  src="../../assets/imag.PNG" />
+  <br>
+
+  <p class="marg">  <i class="fas fa-angle-double-right"></i> veuillez lire les conditions de licence avant d'installer la plate-forme karaz
+  cliquez sur J'accepte pour continuer: </p>
+  <br>
+
+  <img src="../../assets/imag2.PNG"/>
+
+
+   <p class="marg"> <i class="fas fa-angle-double-right"></i>  cliquez sur suivant  pour continuer:</p>
+   <br>
+
+
+  <img src="../../assets/imag3.PNG"/>
+
+
+  <p class="marg"> <i class="fas fa-angle-double-right"></i> choisissez le dossier dans lequel vous voulez installer la plateforme karaz,
+  Puis cliquez sur installer pour démarrer l'installation</p>
+  <br>
+
+
+
+  <img src="../../assets/imag4.PNG"/>
+
+
+
+
+  </div>
+  <div id="Architecture-fonctionnelle-karaz-studio">
+
+    <h3 class="text-primary title-doc"> Architecture fonctionnelle karaz studio </h3>
+
+    <p >Karaz Studio est construit à base de l’IDE légendaire Eclipse, sous forme d’une <strong><em>Perspective</em></strong> regroupant l’ensemble des composants techniques nécessaires à la conception, la génération et le déploiement des modules Karaz. Nous avons pu ainsi profiter d’un socle logiciel riche, stable et robuste et particulièrement de :</p>
+  <ul>
+  <li> <i class="fas fa-angle-double-right"></i> L’éditeur <strong><em>BPMN 2.0</em></strong> que nous avons enrichi et complété avec les artefacts propres à Karaz</li>
+  <li> <i class="fas fa-angle-double-right"></i> L’environnement <strong><em>Maven</em></strong> que nous utilisons fortement au niveau des assistants de conception et des actions de build (génération du PSM)</li>
+  <li> <i class="fas fa-angle-double-right"></i>  Les différents connecteurs à l’infrastructure logicielle packagée avec Karaz Studio (MySQL, Glassfish, …)</li>
+  </ul>
+  <p>En plus des avantages profitables à l’équipe Framework Karaz, ce choix technologique profite également au concepteur/développeur Karaz en lui permettant de :</p>
+  <ul>
+  <li> <i class="fas fa-angle-double-right"></i> Garder les réflexes déjà acquis à travers l’utilisation d’Eclipse entant que simple IDE</li>
+  <li> <i class="fas fa-angle-double-right"></i> Avoir accès à l’écosystème complet des outils et autres perspectives offertes par l’univers Eclipse (Outils de gestion de configuration, Outil de bugs tracking, Outils de déploiement, …)</li>
+  <li> <i class="fas fa-angle-double-right"></i> Profiter facilement des nouvelles versions publiées par la communauté Eclipse</li>
+  </ul>
+
+   <h2> Les macro-Fonctionnalités de karaz studio</h2>
+
+   <p>Les fonctionnalités offertes par Karaz Studio peuvent être classés en 4 catégories correspondants aux 4 étapes clés de production d’un modèle métier :</p>
+   <ul>
+   <li> <i class="fas fa-angle-double-right"></i> <strong>Concevoir</strong> (Design) : Regroupe les fonctionnalités communes de conception des schémas XSD des modèles métier, de leurs processus et de leurs interfaces utilisateurs associées.</li>
+   <li> <i class="fas fa-angle-double-right"></i><strong>Proposer</strong> (Propose) : Regroupe les fonctionnalités de développement assisté prenant la forme d’assistants reposants sur des patterns prédéfinis.</li>
+   <li> <i class="fas fa-angle-double-right"></i><strong>Générer</strong> (Build) : Regroupe les fonctionnalités offertes par Karaz Builder pour la génération et le déploiement des modules applicatifs.</li>
+   <li> <i class="fas fa-angle-double-right"></i><strong>Documenter</strong> (Document) : Regroupe les fonctions de génération de la documentation fonctionnelle et technique des modules applicatifs.</li>
+   </ul>
+   <table width="744" class="table tab table-bordered">
+   <tbody>
+   <tr>
+   <th width="130">
+   <p><strong>CATEGORIE</strong></p>
+   </th>
+   <th width="614">
+   <p><strong>DESCRIPTION</strong></p>
+   </th>
+   </tr>
+   <tr>
+   <td width="130">
+   <img src="../../assets/de.png">
+   <p><strong>Design</strong></p>
+   </td>
+   <td width="614">
+   <table>
+   <tbody>
+   <tr>
+   <td width="66">
+   <img src="../../assets/de1.png">
+
+   </td>
+   <td width="531">
+   <p>Regroupe les fonctionnalités de création et gestion des projets Karaz (Modules Karaz).</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/de2.png">
+   </td>
+   <td width="531">
+   <p>Regroupe les fonctionnalités de création et gestion des modèles métier Karaz.</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/de3.png">
+   </td>
+   <td width="531">
+   <p>Regroupe les fonctionnalités de création et gestion des processus métier Karaz.</p>
+   </td>
+   </tr>
+   </tbody>
+   </table>
+   </td>
+   </tr>
+   <tr>
+   <td width="130">
+   <img src="../../assets/pr.png">
+
+   <p><strong>Propose</strong></p>
+   </td>
+   <td width="614">
+   <table>
+   <tbody>
+   <tr>
+   <td width="66">
+   <img src="../../assets/pr1.png">
+   </td>
+   <td width="531">
+   <p>Assistant de génération de recherches</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/pr2.png">
+   </td>
+   <td width="531">
+   <p>Assistant de génération de menus</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/pr3.png">
+   </td>
+   <td width="531">
+   <p>Assistant de génération de la structure des règles de gestion</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/pr4.png">
+   </td>
+   <td width="531">
+   <p>Assistant de génération des fichiers de traduction</p>
+   </td>
+   </tr>
+   </tbody>
+   </table>
+   </td>
+   </tr>
+   <tr>
+   <td width="130">
+   <img src="../../assets/bu.png">
+
+   <p><strong>Build</strong></p>
+   </td>
+   <td width="614">
+   <table>
+   <tbody>
+   <tr>
+   <td width="66">
+   <img src="../../assets/bu1.png">
+   </td>
+   <td width="531">
+   <p>Fonctionnalité de Build de la partie modèle</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/bu2.png">
+   </td>
+   <td width="531">
+   <p>Fonctionnalité de Build de la partie processus</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/bu3.png">
+   </td>
+   <td width="531">
+   <p>Fonctionnalité de Build de la partie vue</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/bu4.png">
+   </td>
+   <td width="531">
+   <p>Fonctionnalité de déploiement des modules applicatifs Karaz</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/bu5.png">
+   </td>
+   <td width="531">
+   <p>Fonctions de démarrage de Karaz Engine intégré au Studio</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/bu6.png">
+   </td>
+   <td width="531">
+   <p>Fonctions d’arrêt de Karaz Engine intégré au Studio</p>
+   </td>
+   </tr>
+   </tbody>
+   </table>
+   </td>
+   </tr>
+   <tr>
+   <td width="130">
+   <img src="../../assets/do.png">
+
+   <p><strong>Document</strong></p>
+   </td>
+   <td width="614">
+   <table>
+   <tbody>
+   <tr>
+   <td width="66">
+   <img src="../../assets/do1.png">
+   </td>
+   <td width="531">
+   <p>Génération de la documentation au format HTML</p>
+   </td>
+   </tr>
+   <tr>
+   <td width="66">
+   <img src="../../assets/do2.png">
+   </td>
+   <td width="531">
+   <p>Génération de la documentation au format PDF</p>
+   </td>
+   </tr>
+   </tbody>
+   </table>
+   </td>
+   </tr>
+   </tbody>
+   </table>
+
+
+   <h2>
+    Espace de travail Karaz Studio
+
+   </h2>
+  <p>Karaz Studio est composé de 6 principaux espaces de travail :</p>
+  <ul>
+  <li><strong>Espace Karaz modules</strong>: Affiche les modules et les modèles métier qu’ils contiennent. Chaque modèle est représenté sous forme d’une arborescence de fichiers et ressources pouvant être enrichis et modifiés par le concepteur à travers l’espace central de Karaz Studio.</li>
+  <li><strong>Espace Karaz templates</strong>: Affiche des modèles de projets mis à disposition par Karaz. Il s’agit de projets types conçus pour être repris pour une libre utilisation au sein d’autres projets métier. Voire le chapitre
+     <a href="#_Les_templates_karaz">Templates Karaz</a> pour plus d’information.</li>
+  <li><strong>Espace Karaz facettes</strong>: Affiche les modèles de type Facettes mis à disposition par Karaz.
+    Il s’agit de composants remplissant un besoin générique et récurrent et pouvant être aisément intégrés à un nouveau projet.
+     Les facettes son assez similaires au Template Karaz avec la particularité que les facettes peuvent être automatiquement actualisés si leurs projets d’origines viennent à être mis à jour par leurs auteurs. Voire le chapitre <a href="#_Les_facettes_karaz">Facettes Karaz</a> pour plus d’information.</li>
+  <li><strong>Espace Karaz explorer</strong>: Il s’agit d’une vue technique sur les projets Karaz. Elle permet d’afficher les fichiers sources correspondant aux ressources projet (Schéma XSD, Processus, Règles de gestion, …) mais également les fichiers de configuration et les (POM, Fichiers <em>.Properties</em>, …) et les fichiers générés (Java, jar, …)</li>
+  <li><strong>Espace Karaz deployer</strong>: Offre les fonctionnalités nécessaires au déploiement des modules métier vers les différents instances cible (target), tel que l’espace grand public, l’espace de collaboration et la console d’administration. Cet espace permet également d’accéder à l’interface de configuration du serveur d’application et l’EJB Container dans lesquels tourne les modules (<strong><em>Glassfish</em></strong> par défaut) ainsi que le serveur de base de données (<strong><em>MySql</em></strong> par défaut) dans lequel les données du module sont stockées.</li>
+  <li><strong>Espace central </strong>: Constitue le cœur de l’environnement de travail Karaz Studio, où sont exécutées les actions de conception, configuration et codage des modèles métier.</li>
+  </ul>
+
+  </div>
+  <div id="Modules-métier-Karaz">
+    <h3 class="text-primary title-doc"> Modules métier Karaz </h3>
+    <img src="../../assets/mo.png" style="float:left">
+    La conception d’un module applicatif commence par la création d’un projet sous Karaz Studio. La fonction Create New Karaz Module permet d’initier la structure type d’un module métier Karaz. <br> <br> <br>
+
+    <img src="../../assets/mo2.png"
+    style="width:400px;height:200px">
+
+    <h2>  POM (PROJECT OBJECT MODEL) </h2>
+
+
+    <p>Un module Karaz contient un fichier POM.xml contenant l’ensemble des métadonnées du projet représentant le module ainsi que ses dépendances aux ressources externes. Ce fichier est utilisé par <strong><em>Maven</em></strong> pour générer le PSM du projet à travers l’exécution d’un ensemble de « Goals ».</p>
+  <strong>Dependencies Karaz</strong>
+  <p>Les modules métier dépendent pour leur fonctionnement des librairies fournies par le framework Karaz. Par défaut tout nouveau module Karaz crée, intègre dans son POM les 2 dependencies suivantes :</p>
+  <ul>
+  <li><strong>sharedInterface</strong>: Contient un ensemble de librairies communes utilisées par la majorités des modèles Karaz</li>
+  <li><strong>karazcore</strong>: Contient l’ensemble des packages du Framework Karaz</li>
+  </ul>
+  <p>Ces 2 dependencies sont ainsi déclarées au niveau du POM du modèle métier comme suit.</p>
+
+  <img src="../../assets/mo3.png">
+
+  Il s’agit là des 2 librairies Karaz les plus utilisées. Il est possible de la même manière de déclarer d’autres bibliothèques Karaz et notamment à les ressources karazbackend.
+  <img src="../../assets/mo4.png">
+  <BR>
+
+
+  <table width="744">
+  <tbody>
+  <tr>
+  <td width="697">
+  <p><strong><em>Karaz Back End est une collection de modules Karaz standards revêtant une certaine particularité. En effet les modèles Back-End offrent un ensemble de fonctionnalités d’administration agissant sur les objets standards de Karaz, tel que les entités, les utilisateurs, les activités,
+    … Le concepteur Karaz peut interroger et utiliser librement les modèles Back End mais
+     il doit rester très prudent dans la mesure où il peut par inadvertance altérer des objets système
+     critiques pour le fonctionnement de l’instance Karaz. </em></strong><em>(Exemple : Changer le nom d’une entité
+        ou le Login d’un utilisateur).</em></p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+
+  <p>En cas de montée en version du Framework Karaz,
+    il est possible d’installer la nouvelle version et la référencer entant que dépendence en modifiant la balise
+     <strong><em>&lt;version&gt;</em></strong>
+  </p>
+
+  <p>Les bibliothèques sont physiquement disponibles dans le répertoire
+     indiqué par la balise <strong><em>&lt;groupId&gt;</em></strong>.
+      Pour une installation Karaz studio standard sur un système d’exploitation windows,
+       les librairies Karaz citées ci-dessous sont accessible à travers le chemin :
+       <strong>C:\Users\Nom_Utilisateur\.m2\repository\karaz\server\N°_version</strong></p>
+
+       <p>A titre d’exemple pour intégrer une nouvelle version de Karazcore, il suffit de créer un nouveau répertoire dans <strong><em>…\karaz\server</em></strong> et d’y copier le package <strong><em>.jar</em></strong> correspondant à la nouvelle version de Karazcore. Ensuite remplacer sur le
+        POM du module l’ancienne version par la nouvelle.</p>
+
+        <strong> Exemple de fichier POM </strong>
+
+  <p> </p>
+  <p>Le tableau suivant liste les principales balises que contient un POM Karaz :</p>
+  <table width="756">
+  <tbody>
+  <tr>
+  <td width="165">
+  <p><strong>BALISE</strong></p>
+  </td>
+  <td width="591">
+  <p><strong>DESCRIPTION</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="165">
+  <p><strong>&lt;properties&gt;</strong></p>
+  </td>
+  <td width="591">
+  <p>Cette balise localise le chemin par défaut des applications karaz ainsi que l’encodage utilisé.</p>
+  <p>&lt;properties&gt;</p>
+  <p>&lt;kbuilder.karazapp&gt;C:/KStudio/glassfish3/glassfish/domains/domain1/autodeploy/karazApp&lt;/kbuilder.karazapp&gt;</p>
+  <p>&lt;project.build.sourceEncoding&gt;UTF-8 &lt;/project.build.sourceEncoding&gt;</p>
+  <p>&lt;/properties</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="165">
+  <p><strong>&lt;repositories&gt;</strong></p>
+  </td>
+  <td width="591">
+  <p>Cette balise définit les adresses des repositories utilisés par le projet. Plusieurs repositories peuvent y être référencés.</p>
+  <p>&lt;repository&gt;</p>
+  <p>&lt;id&gt;internal&lt;/id&gt;</p>
+  <p>&lt;name&gt;Internal Repository&lt;/name&gt;</p>
+  <p>&lt;url&gt;http://46.102.65.122:8080/repository/internal&lt;/url&gt;</p>
+  <p>&lt;/repository&gt;</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="165">
+  <p><strong>&lt;distributionManagement&gt;</strong></p>
+  </td>
+  <td width="591">
+  <p>Définit les adresses des repositories de distribution par défaut du module issus du projet. Plusieurs repositories ( Internal Release Repository ; Internal Snapshot Repository) peuvent être définis.</p>
+  <p>&lt;repository&gt;</p>
+  <p>&lt;id&gt;internal&lt;/id&gt;</p>
+  <p>&lt;name&gt;Internal Release Repository&lt;/name&gt;</p>
+  <p>&lt;url&gt;http://46.105.74.182:8080/repository/internal/&lt;/url&gt;</p>
+  <p>&lt;/repository&gt;</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="165">
+  <p><strong>&lt;build&gt;</strong></p>
+  </td>
+  <td width="591">
+  <p>Définit le répertoire contenant le programme de génération de code utilisé par le projet.</p>
+  <p>&lt;resources&gt;</p>
+  <p>&lt;resource&gt;</p>
+  <p>&lt;directory&gt;<u>src</u>/main/java&lt;/directory&gt;</p>
+  <p>&lt;excludes&gt;</p>
+  <p>&lt;exclude&gt;**/*.java&lt;/exclude&gt;</p>
+  <p>&lt;/excludes&gt;</p>
+  <p>&lt;/resource&gt;</p>
+  <p>&lt;/resources&gt;</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="165">
+  <p><strong>&lt;plugins&gt;</strong></p>
+  </td>
+  <td width="591">
+  <p>Définit les plugins utilisés par le projet. Par défaut tout projet Karaz utilise les plugins maven suivants : maven-compiler-plugin ; kbuilder-maven-plugin ; maven-ejb-plugin ; maven-eclipse-plugin ; maven-antrun-plugin</p>
+  <p>Ci-dessous un exemple de définition d’un plugin :</p>
+  <p>&lt;plugin&gt;</p>
+  <p>&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</p>
+  <p>&lt;artifactId&gt;<u>maven</u>-compiler-<u>plugin</u>&lt;/artifactId&gt;</p>
+  <p>&lt;version&gt;3.5.1&lt;/version&gt;</p>
+  <p>&lt;configuration&gt;</p>
+  <p>&lt;source&gt;1.7&lt;/source&gt;</p>
+  <p>&lt;target&gt;1.7&lt;/target&gt;</p>
+  <p>&lt;/configuration&gt;</p>
+  <p>&lt;/plugin&gt;</p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+
+  <div id="modeles-metiers-karaz">
+  <h3 class="text-primary  title-doc">
+    Modèles métier Karaz
+  </h3>
+  <h2>
+    Création d'un modèle métier
+  </h2>
+  <img src="../../assets/modele.png" style="float :left">
+
+  Un modèle métier est créé sous Karaz Studio à partir
+  de l’action New Model. Dans le cas où l’espace de travail Karaz Studio
+   du concepteur contient plusieurs projets (Modules), ce dernier doit commencer
+    par sélectionner le module devant contenir le nouveau modèle.
+
+  <img src="../../assets/modele2.png"  style="width:400px;height:200px;float :right">
+
+  Le concepteur donne par la suite un nom à son modèle et choisi parmi la liste des
+  templates disponibles sur Karaz Studio, celle qui se rapproche le plus de son besoin.
+  Ceci lui permet de réduire le délai de conception et de développement du nouveau modèle,
+  en profitant d’un code performant, stable et bien testé. <br> <br> <br>
+
+  <img src="../../assets/modele3.png" style="float :left">
+
+
+  Il est possible de créer le nouveau modèle selon une structure hiérarchique permettant de mieux organiser l’espace de travail.
+  Par exemple en donnant au modèle le nom designerLevel1/achat/demande, le nouveau modèle sera créé selon l’arborescence ci-contre.
+  <h1> Initialisation du modèle Karaz </h1>
+
+  <p>Techniquement, la création d’un nouveau modèle fait appel à un goal <strong><em>Maven</em></strong> à travers la ressource <a href="http://karazArchivaServer/repository/internal/karaz/tools/kbuilder-maven-plugin/5.1.1/kbuilder-maven-plugin-5.1.1.pom"><em>http://karazArchivaServer/repository/internal/karaz/tools/kbuilder-maven-plugin/5.1.1/kbuilder-maven-plugin-5.1.1.pom</em></a>.</p>
+  <p><strong><em>KarazArchivaServer</em></strong> étant le serveur permettant à Karaz Studio de télécharger les ressources nécessaire à l’exécution les instructions de création d’un nouveau modèle en se basant sur un POM principal.</p>
+  <p>L’exécution du Goal <strong><em>Create</em></strong> du POM <strong><em>kbuilder-maven-plugin-5.1.1.pom</em></strong> permet de télécharger et exécuter un ensemble de POM aboutissant à l’initialisation du modèle métier conformément à une structure standardisée.</p>
+
+  <h1> Structure type d’un modèle Karaz</h1>
+
+  <p><img style="float: right;height:300px" src="../../assets/modele4.png" alt="" /></p>
+  <p>A la création d’un nouveau modèle, Karaz Studio générera une structure de modèle métier type. Cette structure varie en fonction du template utilisé.</p>
+  <p>Un ensemble minimal d’éléments est cependant obligatoire pour tout modèle Karaz. Ci-contre un exemple d’une structure standard d’un modèle métier. Dans la pratique seuls les éléments suivants sont absolument nécessaires pour un fonctionnement nominal :  les processus <strong><em>.bpmn</em></strong>, le schéma <strong><em>.xsd</em></strong>, les fichier <strong><em>.view</em></strong> et le fichier de configuration <strong><em>kconfig.xml</em></strong>.</p>
+  <p>Dans la suite de la section, nous listerons les éléments importants de la structure type d’un modèle Karaz</p>
+  <p> </p>
+  <table style="width: 719px;">
+  <tbody>
+  <tr>
+  <td style="width: 10px;">
+  <p><strong> </strong></p>
+  </td>
+  <td style="width: 696px;">
+  <p><strong><em>Le choix d’une template est obligatoire pour l’initialisation d’un modèle. La template par défaut est « Cherry ».</em></strong></p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <p> </p>
+  <table width="780">
+  <tbody>
+  <tr>
+  <td width="142">
+  <p><strong>ELEMENT</strong></p>
+  </td>
+  <td width="638">
+  <p><strong>DESCRIPTION</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142"> <img src="../../assets/modele5.png" alt="" /></td>
+  <td width="638">
+  <p>L’icône sous forme d’arbre indique l’espace de travail Karaz (KWS : Karaz Work Space) associé au projet.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142"> <img src="../../assets/modele6.png" alt="" /></td>
+  <td width="638">
+  <p>Branche du projet Karaz qui devrait contenir les modèles métier du module. Une branche pouvant contenir plusieurs modèles métiers.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142"> <img src="../../assets/modele7.png" alt="" /></td>
+  <td width="638">
+  <p>Le modèle métier est indiqué par l’icône Karaz. Un module Karaz peut contenir plusieurs modèles.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Process</strong></p>
+  <p><strong> <img src="../../assets/modele8.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Le nœud « process » contient les logigrammes représentants les processus métier associés au modèle. Par défaut Karaz proposera un seul fichier bpmn ayant comme nom « ’Gestion’+Nom_Model+’.bpmn’ ». D’autre fichier «.bpmn » peuvent être crées  à travers un clic droit sur l’icône processus, suivi par l’activation du menu « Add New File ».</p>
+  <p>NB : Le nom fourni au fichier doit prendre l’extension «.bpmn ».</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Model</strong></p>
+  <p><strong><img src="../../assets/modele9.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Ce nœud contient la description proprement dite du modèle métier à travers la représentation hiérarchique des structures de données et les attributs qui le composent. Cet élément prend la forme d’un fichier XSD adoptant la nomenclature unifiée suivante : ModelName-<strong>model.xsd</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>View</strong></p>
+  <p><strong><img src="../../assets/modele10.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Ce nœud représente l’aspect interface utilisateur du modèle métier. Les éléments graphiques sont imbriqués de façon hiérarchique pour produire en arrière-plan un fichier XML décrivant les vues associées au modèle métier. Le fichier généré adopte la nomenclature ModelName-<strong>view.xml</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>BizRules</strong></p>
+  <p><strong><img src="../../assets/modele11.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Ce nœud contient les règles de gestion associées au modèle. L’interface graphique Karaz Studio permet de construire graphiquement les règles pour aboutir en arrière-plan à un fichier prenant la forme de ModelName-<strong>kbizrules.xml</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Search</strong></p>
+  <p><strong><img src="../../assets/modele12.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Le nœud « Search » contient les recherches associées au modèle, lesquelles sont listées sous forme de fichiers XML symbolisés par l’icône . Une recherche portant le nom « ‘all’ + ModelName + ‘Default’ » est proposée par défaut.</p>
+  <p>Pour créer une nouvelle recherche. Le plus simple et de procéder par clonage de la recherche par défaut en passant par la fonctionnalité Clic droit + copier + coller.</p>
+  <p>Les recherches sont paramétrables graphiquement au niveau du panneau central de Karaz Studio. Ce volet sera traité dans le sous-chapitre sur <a href="#_Les_recherches">Les recherches</a>.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Web</strong></p>
+  <p><strong><img src="../../assets/modele13.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Le nœud « Web » regroupe les ressources web associées spécifiquement au modèle métier : css, ../../assets, fichier .js, …</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Translation</strong></p>
+  <p><strong><img src="../../assets/modele14.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Contient les dictionnaires de traduction des éléments traductibles de l’interface utilisateur : écrans, menus, messages, …</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Reporting</strong></p>
+  <p><strong><img src="../../assets/modele15.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Le nœud « reporting » liste les états de sortie associés au modèle métier et qui sont indiqués par l’icône . Chaque état de sortie est composé à minima des 3 fichiers suivants :</p>
+  <p> ReportName-<strong>params.xml</strong> : fichier listant les Xpaths des champs utilisés dans l’état de sortie ainsi que la vue associée à l’édition de l’état de sortie.</p>
+  <p> ReportName<strong>-template.xhtml</strong> : fichier définissant la structure html de l’état de sortie, la logique d’affichage des données métier utilisées ainsi que les éventuelles formules de calcul et d’agrégation des données.</p>
+  <p> ReportName<strong>-skin.css </strong>: fichier de style utilisé par l’état de sortie</p>
+  <p>D’autres ressources (../../assets, fichiers xml, …) peuvent être rajoutées et utilisées pour la construction de<img src="../../assets/modele16.png" alt="" /> l’état de sortie.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Kconfig</strong></p>
+  <p><strong><img src="../../assets/modele16.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Kconfig.xml permet de définir graphiquement un ensemble de paramètres de configuration concernant : les menus, les actions, les états de sortie, …</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>.ini</strong></p>
+  <p><strong><img src="../../assets/modele16.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p><strong>Définit les valeurs par défaut avec lesquelles est initialisé tout objet métier instancié à partir du modèle métier.</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Attachement</strong></p>
+  <p><strong><img src="../../assets/modele16.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Définit la liste des documents devant être joints aux objets instanciés à partir du modèle métier. </p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Menu</strong></p>
+
+  <p><strong><img src="../../assets/modele16.png" alt="" /></strong></p></td>
+  <td width="638">
+  <p>Définit la structure des menus associés au modèle métier. La structure proposée par défaut se présente selon le concept des 3 actions clés proposées par Karaz. A savoir :</p>
+  <p>§ Menu lancement nouvelle instance du processus et du modèle</p>
+  <p>§ Menu corbeille de tâches</p>
+  <p>§ Menu recherches</p>
+  <p>Cette structure peut être remplacée ou complétée par des structures de menus spécifiques au modèle métier.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Indexation</strong></p>
+  <p><strong><img src="../../assets/modele16.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Cet élément liste les indexes de recherches générés par le modèle métier sur la base du schéma XSD.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="142">
+  <p><strong>Xpaths</strong></p>
+  <p><strong><img src="../../assets/modele16.png" alt="" /></strong></p>
+  </td>
+  <td width="638">
+  <p>Ce fichier ayant pour extension « .xpath » permet de déclarer automatiquement les différentes variables utilisées par le modèle.</p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+
+  <h2>
+    Actions sur les modèles métiers.
+  </h2>
+  <img  src="../../assets/modele17.png" />
+  <p> Karaz Studio propose 3 catégories d’actions clés appliquées aux modèles métier et qui sont disponibles à partir d’un clic droit sur le modèle métier. Il s’agit de l’action de génération du PSM du modèle,
+     de l’assistance à la configuration et en fin de l’action de rajout de ressources au modèle.</p>
+
+
+    <h1>  Karaz Builder </h1>
+  Regroupe des outils de génération du PSM à partir du PIM du modèle. 5 fonctions clés sont mis à disposition par Karaz Builder pour générer les équivalents technologiques des 3 composants PIM à savoir : le modèle, le process et les actions. Le détail du fonctionnement de Karaz Builder est abordé au chapitre Karaz Builder.
+  Ce menu permet également de déployer la partie technologique vers son environnement cible. Ce sera le sujet du chapitre Déploiement des modules applicatifs.
+
+
+   <h1>
+    Karaz Assistant
+   </h1>
+
+  <p>Regroupe des outils permettant de générer automatiquement un ensemble d’éléments complexes. Il s’agit dans la pratique d’assistants permettant au concepteur de gagner en temps et en fiabilité sur le développement de certaines fonctionnalités communes à la plupart des modèle métier. Les assistants Karaz adressent 8 besoins clés :</p>
+  <ul>
+  <li>Menus utilisateurs ;</li>
+  <li>Règles de gestion ;</li>
+  <li>Fonctions de recherches ;</li>
+  <li>Cubes multidimensionnels (OLAP) ;</li>
+  <li>Actions distantes ;</li>
+  <li>Dictionnaires de traduction ;</li>
+  <li>Documentation du modèle ;</li>
+  <li>Import de données.</li>
+  </ul>
+  <p>Le mode de fonctionnement de la majorité de ces assistants consiste à se baser sur le schéma XSD et les BPMN du modèle pour générer à l’aide de templates et algorithmes préconçus, des versions de base des fonctionnalités ci-dessous.</p>
+  <p>Ces assistants invitent le concepteur tout au long de l’opération à renseigner des paramètres et des choix d’implémentation permettant d’affiner et personnaliser les fonctionnalités générées au terme de l’exécution de l’assistant.</p>
+  <p>Le concepteur garde par la suite la main sur les fonctions générées pour les modifier compte tenu des évolutions du besoin et de la nécessité de rajouter des capabilités non prises en charge nativement par l’assistant.</p>
+  <p>Les chapitres et section traitant les aspects <a href="#_Les_recherches">Recherches</a>, <a href="#_Les_règles_de">Règles de gestion</a> et <a href="#_Les_rapports_1">Rapports</a> proposent des cas d’utilisation pratiques et guidés permettant de mieux cerner le fonctionnement des assistants Karaz.</p>
+  <p style="text-align: justify;"> </p>
+
+  <h1>
+
+  Ajout de fichiers au modèle.
+  </h1>
+
+  <p>Ce menu permet de rajouter au modèle métier un ensemble de ressources prédéfinies et totalement prises en charge par Karaz builder. Il s’agit des types de ressources suivantes :</p>
+  <ul>
+  <li><strong>Ajout de processus</strong> (Add New KaRaZ Process)</li>
+  <li><strong>Ajout de recherche</strong> (Add New KaRaZ Search )</li>
+  <li><strong>Ajout de liste dynamique</strong> (Add New KaRaZ Dynamic Lists)</li>
+  <li><strong>Ajout de méta-données au modèle ou module</strong> (Add New KaRaZ Module Info)</li>
+  <li><strong>Ajout de planificateur</strong> (Add New KaRaZ Scheduler)</li>
+  <li><strong>Ajout de règles de gestion</strong> (Add New KaRaZ Business Rules)</li>
+  </ul>
+  <p>Chacun des éléments cités ci-dessus est initié à partir d’une template prédéfinie. Ce mécanisme permet d’uniformiser et optimiser le travail du concepteur, à travers la réutilisation de structures optimisées et bien testées.</p>
+  <table width="721">
+  <tbody>
+  <tr>
+  <td width="673">
+  <p><strong><em>La version standard de Karaz Studio supporte une seule instance de chacun des éléments suivants : Schéma XSD, fichier Vue, Fichier Kconfig. Ces 3 éléments étant proposés automatiquement à la création du modèle, les menus d’ajout de ces 3 éléments n’ont aucun effet sur le modèle..</em></strong></p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+

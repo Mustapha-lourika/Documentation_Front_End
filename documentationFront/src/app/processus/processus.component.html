@@ -1,0 +1,347 @@
+    <div class="content_introduction">
+      
+  Un modèle Karaz peut contenir un ou plusieurs processus métier. Dans la plupart des cas l’un des processus associés au modèle constitue le processus principal qui est à l’origine de création de toutes les instances du modèle (instance modèle=objet).
+  Ainsi, le lancement d’une instance de ce processus, crée automatiquement l’objet auquel le processus s’applique.
+  A un modèle métier peuvent être appliqués plusieurs processus. Ils ne peuvent cependant tourner simultanément que s’ils sont de type Non Exclusive.
+  La modélisation du processus métier est le premier travail de conception que le développeur ou l’analyste métier effectue sur Karaz Studio dans le cadre de la production d’un module applicatif
+  <div  id="configuration-de-processus">
+  <h3  class="text-primary title-doc">  Configuration de processus </h3>
+
+  <p>Tout processus métier sous Karaz peut être configuré à travers un ensemble de propriétés, dont les plus importantes sont regroupées au niveau de l’onglet « Process » de la fenêtre <strong><em>Propriétés</em></strong>. Ces paramètres de configuration du processus  sont listés dans le tableau ci-après :</p>
+  <table class="table tab table-bordered">
+  <tbody>
+  <tr>
+  <td width="154">
+  <p><strong>ATTRIBUT</strong></p>
+  </td>
+  <td width="626">
+  <p><strong>ROLE</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Name</strong></p>
+  </td>
+  <td width="626">
+  <p>Nom du processus. Il s’agit du nom qui apparaitra au niveau de la console d’administration (Karaz Back End). Ce nom peut être diffèrent du nom du fichier (process_name.bpmn)</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Default View</strong></p>
+  </td>
+  <td width="626">
+  <p>Précise le nom de la vue qui s’affichera par défaut lors du lancement d’une nouvelle instance du processus.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Is Auto Start</strong></p>
+  </td>
+  <td width="626">
+  <p>Si activé, cet attribut indiquera à Karaz Workflow Engine qu’à la création d’une instance de ce processus par un utilisateur, ce dernier se verra automatiquement affecté la première <em>user activity</em> du modèle. Si l’attribut n’est pas activé la première <em>user activity</em> du processus sera affectée au pool concerné. En d’autres termes cet attribut contrôle le passage du workflow par le moment <strong><em>Allocated</em></strong>.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Is Journalizable</strong></p>
+  </td>
+  <td width="626">
+  <p>Cochée, cette option permet d’historiser toute la structure de l’objet métier concerné par le processus et ce à l’occasion de toute validation d’activité.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Default Task List</strong></p>
+  </td>
+  <td width="626">
+  <p>Précise le nom de la vue <strong><em>Task List</em></strong> qui s’affiche par défaut dans le cas où l’activité courante du processus n’en spécifie aucune.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Is Exclusive</strong></p>
+  </td>
+  <td width="626">
+  <p>Cochée, cette option empêche le lancement d’une instance du processus concerné lorsqu’une autre instance (du même processus ou de tout autre processus) est déjà en cours d’exécution sur un même objet métier.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Process Type</strong></p>
+  </td>
+  <td width="626">
+  <p>Prend l’une des 3 valeurs suivantes :</p>
+  <p>-      <strong>Public</strong> : Lorsqu’il s’agit d’un processus pouvant être déclenché par un utilisateur</p>
+  <p>-      <strong>Privé</strong> : Lorsqu’il s’agit d’un processus déclenché par un autre processus privé ou public</p>
+  <p>-      <strong>None</strong> : Lorsque le type n’est pas spécifié</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Is Executable</strong></p>
+  </td>
+  <td width="626">
+  <p>Si cet attribut est activé, Karaz Builder prendra en compte le processus lors de la génération du PSM associé au modèle. Dans le cas contraire le processus sera considéré comme simple documentation et ne sera pris en compte par Karaz Builder ni par Karaz Workflow Engine.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Is Closed</strong></p>
+  </td>
+  <td width="626">
+  <p>Indique que le processus ne subira plus de modification.</p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <p>Le screenshot suivant illustre les paramètres de configuration d’un processus métier Karaz :</p>
+  <img   class="center" src="../../assets/processus1.png" alt="" />
+  </div>
+
+
+
+
+  <div id="creation-de-processus">
+
+    <h3  class="text-primary title-doc"> Création de processus  </h3>
+
+    <p class="marg"> chaque projet  contient ou ou  plusieurs modèles.
+    dans cette exemple on a deux modèles "Article" et "Collaborateur" </p>
+
+    <img  class="center" src="../../assets\imag30.png" >
+
+    <div > chaque modèle  contient ou ou plusieurs processus .On peut aussi ajouter des autres processus </div>
+
+    <img class="center" src="../../assets/imag31.png" >
+
+
+    <div class="marg"> On clique sur 'Open Resource File' pour visualiser le processus : </div>
+
+    <img src="../../assets/imag32.png"> <br>
+
+    <div class="marg">  karaz studio offre une palette qui contient tous les éléments de processus </div>
+
+    <img src="../../assets\imag33.png" > <br>
+
+    <p class="marg"> Un exemple de processus </p>
+
+    <img src="../../assets\imag34.png" > <br>
+
+    <div class="marg"> les propriétés d'une activité utilisateur </div>
+
+    <img src="../../assets\imag35.png" >
+    <p class="marg">Le tableau suivant indique le rôle de chacun des attributs de paramétrage de l’activité :</p>
+  <table width="780" class="table tab table-bordered">
+  <tbody>
+  <tr>
+  <td width="154">
+  <p><strong>ATTRIBUT</strong></p>
+  </td>
+  <td width="626">
+  <p><strong>ROLE</strong></p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Time to Complete</strong></p>
+  </td>
+  <td width="626">
+  <p>S’exprime en « dx » ou en « hx » pour indiquer respectivement le nombre de jours ou d’heures nécessaires à la réalisation de l’activité.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>View Name</strong></p>
+  </td>
+  <td width="626">
+  <p>Indique le nom de la vue à laquelle l’activité est associée. Chaque activité de type « User Task » est obligatoirement associée à une vue.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Screen Mask</strong></p>
+  </td>
+  <td width="626">
+  <p>Indique le nom du masque (usage) qui s’appliquera à la vue, lorsque l’objet sera ouvert pendant l’activité concernée. Chaque activité de type « User Task » doit obligatoirement être associée à un masque. Ce masque sera très utile (Comme nous le verrons à la section <a href="#_Attributs_communs">usages et masques</a>) pour la gestion dynamique des vues tout au long du cycle d’exécution du processus. Si ce champ n’est pas renseigné, il prendra par défaut le nom de l’activité.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Task List</strong></p>
+  </td>
+  <td width="626">
+  <p>Indique le nom du bloc dans la vue modèle (model-view.xml) qui correspond à la vue Task List associée à l’activité. Cela correspondra à la vue affichée lorsque l’utilisateur clique sur un objet métier se trouvant au stade de l’activité en question.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Container Xpath</strong></p>
+  </td>
+  <td width="626">
+  <p>Utilisé uniquement pour les activités de type KMAA. Il n’a pas d’utilité dans le cas des activités normales.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Performer</strong></p>
+  </td>
+  <td width="626">
+  <p>Indique le rôle (Profil) pouvant exécuter l’activité. Il s’agit d’un élément de documentation uniquement. Les profils étant générés automatiquement pas Karaz pour chaque activité, pour être utilisés librement en post déploiement pour définir les rôles métier des utilisateurs.</p>
+  </td>
+  </tr>
+  <tr>
+  <td width="154">
+  <p><strong>Implementation</strong></p>
+  </td>
+  <td width="626">
+  <p>Permet de définir le nom et le nom complet (URI : Unified Resource Identifier) d’un service implémentation.</p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+
+  <p class="marg"> Les propriétés de l'activité 'Send Email' </p>
+
+  <table>
+  <tr>
+  <td>
+  <img src="../../assets\imag36.png">
+  </td>
+  <td>
+  <img src="../../assets\imag37.png" >
+  </td>
+  </tr>
+  </table>
+  <br>
+  <ul>
+  <li>
+  <b>  Name:</b> le nom de l'activité
+  </li>
+  <li>
+  <b>is Deffered:</b>  Si on coche 'is Deffered' le lancement de l'activité sera répétée 'Retry Nbr' fois   chaque 'Retry Delay Sec' secondes
+
+  </li>
+  <li>
+  <b>Email templateQN:</b> c'est le lien de Template pour l'email défini dans 'reporting'
+
+  </li>
+
+  <li>
+  <b>Email Container Xpath:</b> la facette d'envoi d'email
+  </li>
+
+
+  </ul>
+
+
+  <div class="marg"> Les propriétés de l'activité 'Launch Process'</div>
+
+  <table>
+  <tr>
+  <td>
+  <img src="../../assets\imag38.png" style="float:right;padding:3px">
+  </td>
+  <td>
+  <img src="../../assets\imag39.png" style="float:left;padding:3px;">
+  </td>
+  </tr>
+
+  </table>
+    <br>
+
+      <br>
+  <ul>
+  <li>
+  <b> Name:</b> le nom de l'activité 'Launch Process'
+  </li>
+
+  <li>
+  <b>Target ProcessQN</b>  le chemin de processus qu'on va lancer.
+  </li>
+  <li>
+  <b>Email templateQN:</b> c'est le lien de Template pour l'email défini dans 'reporting'
+
+  </li>
+
+  <li>
+  <b> Container Xpath:</b> c'est la facette  utilisé dans shéma XSD de type 'Launch Process'
+  </li>
+  <li>
+  <b> Is Deffered :</b>Si On coche 'Is Deffered' le système va essayer de lancer le processus chaque 10 secondes jusqu'a la réusssite de lancement.
+  </li>
+
+
+  </ul>
+
+  <h1 class="h1"> la génération des EJBs des activiés de processus </h1>
+
+  pour générer les EJBs de chaque activité on utilise 'Build Stub'.
+
+  On trouve les classes générées dans le dossier 'java'
+
+
+  <table>
+  <tr>
+  <td>
+  <img src="../../assets\imag40.png" >
+  </td>
+  <td>
+  <img src="../../assets\imag41.png" >
+  </td>
+  </tr>
+
+  </table>
+
+
+
+    </div>
+
+
+    <div id="Les-activités">
+      <h3  class="text-primary title-doc">     Les activités </h3>
+
+      Un processus est composé d’un ensemble d’activités reliées par des ressources et des passerelles. Les activités processus peuvent être rangées en 6 types :
+      <ul>
+        <li>
+          <i class="fas fa-info-circle"></i>
+      <strong>  Activité manuelle (Manual Task) </strong>
+
+        </li>
+
+       <li>
+         <i class="fas fa-info-circle"></i>
+       <strong>   Activité utilisateur (Use Task  ) </strong> </li>
+
+
+         <li>  <i class="fas fa-info-circle"></i>   <strong>Activité automatique (Script Task) </strong></li>
+
+      <li>
+
+       <i class="fas fa-info-circle"></i>  <strong>  Activité règle de gestion (Business Rule Task)</strong> </li>
+
+
+      <li> <i class="fas fa-info-circle"></i> <strong>  Activité service </strong></li>
+
+      <p>Une activité service se situe à mi-chemin entre l’activité utilisateur et l’activité automatique. Elle permet à un processus métier d’invoquer via message un service tiers qui peut être soit un web service soit un processus tiers. Karaz Workflow Engine attendra le retour du service appelé avant de continuer l’exécution du processus.</p>
+      <p>A l’inverse de l’activité automatique, l’activité service peut rester en attente tant que le service appelé n’a pas fourni de retour.</p>
+      <p>Les mécanismes de prise en charge des activités service restent cependant assez génériques. Il est donc fortement recommandé d’adopter à la place les activités KMAA introduites plus loin, qui elles proposent des mécanismes optimisés et contrôlés pour réaliser des tâches communément utilisées (Invocation web service, envoi e-mail, …).</p>
+
+
+      <li> <i class="fas fa-info-circle"></i> <strong> Activité envoi  </strong> </li>
+      <p>Une activité de type « envoi » permet d’envoyer un message à un acteur externe. Une fois le message envoyé, l’activité est automatiquement clôturée.</p>
+      <p>Comme dans le cas de l’activité « service », l’activité « Envoi » prévue en standard par BPMN 2.0 reste très générique. Pour avoir une utilité réelle et pratique dans l’exécution des processus, Karaz Studio propose une implémentation spécifique sous forme d’activité KMAA
+      </p>
+      </ul>
+
+
+      </div>
+
+
+
+
+
+      </div>
+
+
+

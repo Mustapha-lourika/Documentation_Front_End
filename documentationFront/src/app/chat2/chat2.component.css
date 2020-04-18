@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.l{
+  /*pointer-events: none;*/
+  font-family:'Open Sans'
+
+}
+@import '../../../node_modules/@nebular/theme/styles/themes';
+
+.control-status-example {
+  padding: 0.25rem;
+  margin: 0.25rem;
+
+}

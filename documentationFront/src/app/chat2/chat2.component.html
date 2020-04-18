@@ -1,0 +1,46 @@
+<nb-layout class="chate" *ngIf="chatisHere;else bloc">
+
+  <nb-layout-column  class="chat"  >
+    <div>
+
+     <button (click)="ch2()" class="l btn-primary" style="font-family:Open Sans;margin-left: 90%;">
+      <i class="fas fa-window-close"></i>
+     </button>
+ </div>
+<ng-container  >
+
+    <nb-chat [title]="chat.title"    *ngFor="let chat of chats"  [status]="chat.status" size="medium">
+      <nb-chat-message [hidden]="false" (click)="ch($event)" *ngFor="let message of listMessageBaseDonne"
+                       [message]="message.messageoutpu"
+                       [sender]="message.source"
+                       [date]="message.date"
+
+                       [reply]="username!=message.source"
+                      >
+      </nb-chat-message>
+      <nb-chat-form  (send)="sendMessage($event)"   [hidden]="false" ></nb-chat-form>
+
+    </nb-chat>
+  </ng-container>
+
+
+  </nb-layout-column>
+</nb-layout>
+
+<ng-template #bloc>
+
+<nb-layout class="chate">
+
+  <nb-layout-column  class="chat"  >
+    <div (click)="ch2()"  >
+
+
+      <button nbButton size="medium" status="primary" class="btn-chat">Ouvrir la fenetre de chat</button>
+    </div>
+
+
+
+  </nb-layout-column>
+</nb-layout>
+</ng-template>
+

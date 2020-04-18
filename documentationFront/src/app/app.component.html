@@ -1,0 +1,16 @@
+
+<app-navbar  *ngIf="isLoggedIn && tes()" >
+
+</app-navbar>
+<app-sidebar *ngIf="isLoggedIn && tes()">
+
+</app-sidebar>
+
+<app-chat2  *ngIf="isLoggedIn && !isEditorHer">
+
+</app-chat2>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <button (click)="tes()">  ddd</button>
+

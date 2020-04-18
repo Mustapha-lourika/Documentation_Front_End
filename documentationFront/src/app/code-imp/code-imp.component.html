@@ -1,0 +1,73 @@
+
+<div class="content_introduction">
+
+   <ul>
+
+  <li  *ngFor="let g of widgets" id={{g.id_code}} >
+
+   <h3> {{g.titre}} </h3>
+  <table  border="2" class="table  " >
+    <tr>
+      <td  colspan="2">
+
+        {{g.description}}
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <code>
+          {{g.codewidget}}
+
+        </code>
+        <br>
+
+
+        <button  *ngIf="isAdmin"  class="btn-change"class="btn btn-info" (click)="onChang(g.id_code)" >
+          <i class="fas fa-pen-alt"></i>
+                    <span>Modifier le code </span>
+                  </button>
+
+
+      </td>
+      <td>
+        <table>
+ <tr>
+   <td colspan="2">
+
+
+
+        <img width="500px" height="400px" src="data:image/png;base64,{{g.image}}" alt="Red dot" />
+
+      </td>
+
+      </tr>
+      <tr>
+<td>
+
+            <input  *ngIf="isAdmin"  type="file" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" />
+
+
+      </td>
+
+      <td>
+
+        <button *ngIf="isAdmin"  class="btn btn-danger" (click)=" onImageChange(g.id_code)"> enregistrer l'image </button>
+
+      </td>
+
+      </tr>
+
+      </table>
+
+      </td>
+    </tr>
+  </table>
+</li>
+</ul>
+</div>
+
+
+
+
+

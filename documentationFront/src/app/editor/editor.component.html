@@ -1,0 +1,54 @@
+<!--
+<div  class="content_introduction.active">
+
+
+<table border="3" >
+  <tr   style="width:1000px">
+    <td style="width: 500px; height:500px;">
+
+      <div style="width: 500px ; height:500px;"   #codeEditor></div>
+
+    </td>
+    <td style="width: 500px; height:500px;" >
+      <iframe  style="overflow: hidden;" id="frame" width="500px" height="500px" [src]="urlSafe">
+
+      </iframe>
+    </td>
+  </tr>
+
+
+  </table>
+  <button (click)="get()">
+     Actualiser
+  </button>
+</div>
+<textarea #d  style="height: 500px;;width: 700px;top: 0em;">
+
+</textarea>
+
+-->
+<nb-layout class="editor-layout" style="width: 100%;" >
+
+  <nb-layout-header>
+    <button (click)="get()" nbButton status="primary" style="margin-right: 20px;"> Visualiser</button>
+
+    <button (click)="getdata()" nbButton status="primary"> Récupérer le code de la vue</button>
+
+
+  </nb-layout-header>
+<nb-layout-column class="colored-column-warning" >
+  <div style="font-size:15px;border: 5px red solid;margin-left: -200px; width: 700px ; height:100%; float:left;"  #codeEditor></div>
+</nb-layout-column>
+
+
+  <nb-layout-column >
+
+<iframe  style="margin-right: -210px ;overflow: hidden;float: right;" id="frame" width="700px" height="100%" [src]="urlSafe">
+</iframe>
+
+
+
+</nb-layout-column>
+
+
+</nb-layout>

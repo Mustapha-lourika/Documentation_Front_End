@@ -1,0 +1,55 @@
+
+
+<!--  <div class="chat"  *ngIf="hiddenchat; else able">
+  <button  class="btn btn-primary" style="width: 100%;" (click)=" ToogleChat()"> Chat</button>
+
+</div>
+  -->
+
+
+<div class="chat" id="contenu"  style="overflow-y:auto">
+  <table>
+    <button  class="btn btn-primary" style="width: 100%;" (click)=" ToogleChat()"> Chat</button>
+    <tr>
+      <td>
+      </td>
+
+    </tr>
+    <tr >
+      <td>
+
+
+
+
+<table  #tble class="table table-chat">
+<tbody>
+<tr *ngFor="let message of listMessageBaseDonne;" >
+  <td >         {{message.messageoutpu}}</td>
+
+<!--   <td style="text-decoration: white;">{{message.source}}</td>
+<td style="border: 2px solid red;">         {{message.messageoutpu}}</td>
+<td> {{message.date}}  </td>
+-->
+</tr>
+
+</tbody>
+</table>
+
+
+
+<!--The content below is only a placeholder and can be replaced.-->
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+  enabled. Please enable
+  Javascript and reload this page!</h2></noscript>
+
+
+
+    <input type="text" id="text"  required="required"  [(ngModel)]=" contentm" placeholder="Write a message..."/>
+    <button id="sendMessage" (click)="sendMessage();">Send</button>
+  </td>
+</tr>
+
+  </table>
+
+
+</div>
